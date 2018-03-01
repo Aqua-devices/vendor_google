@@ -87,6 +87,8 @@ PRODUCT_PACKAGES += \
     SprintHM \
     TimeService \
     VzwOmaTrigger \
+    WfcActivation \
+    MyVerizonServices \
     datastatusnotification \
     obdm_stub \
     qcrilmsgtunnel \
