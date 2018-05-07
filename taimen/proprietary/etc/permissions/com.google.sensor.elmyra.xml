@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<permissions>
+    <privapp-permissions package="com.google.sensor.elmyra">
+        <permission name="android.permission.USE_SENSOR" />
+    </privapp-permissions>
+</permissions>
