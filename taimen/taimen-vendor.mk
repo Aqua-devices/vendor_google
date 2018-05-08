@@ -59,7 +59,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
     vendor/google/taimen/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/google/taimen/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
-    vendor/google/taimen/proprietary/lib64/librcc.so:system/lib64/librcc.so
+    vendor/google/taimen/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/google/taimen/proprietary/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:system/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
+
 
 PRODUCT_PACKAGES += \
     Tycho \
