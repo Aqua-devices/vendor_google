@@ -22,8 +22,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/etc/firmware/dnd.sound_model:system/etc/firmware/dnd.sound_model \
     vendor/google/walleye/proprietary/etc/firmware/music_detector.descriptor:system/etc/firmware/music_detector.descriptor \
     vendor/google/walleye/proprietary/etc/firmware/music_detector.sound_model:system/etc/firmware/music_detector.sound_model \
+    vendor/google/walleye/proprietary/etc/ambient/matcher_tah.leveldb:system/etc/ambient/matcher_tah.leveldb \
     vendor/google/walleye/proprietary/etc/permissions/com.android.sdm.plugins.connmo.xml:system/etc/permissions/com.android.sdm.plugins.connmo.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.android.sdm.plugins.sprintdm.xml:system/etc/permissions/com.android.sdm.plugins.sprintdm.xml \
+    vendor/google/walleye/proprietary/etc/permissions/com.android.vzwomatrigger.xml:system/etc/permissions/com.android.vzwomatrigger.xml \
+    vendor/google/walleye/proprietary/etc/permissions/com.google.android.camera.experimental2017.xml:system/etc/permissions/com.google.android.camera.experimental2017.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.verizon.apn.xml:system/etc/permissions/com.verizon.apn.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.verizon.embms.xml:system/etc/permissions/com.verizon.embms.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.verizon.llkagent.xml:system/etc/permissions/com.verizon.llkagent.xml \
@@ -31,6 +34,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/etc/permissions/com.verizon.services.xml:system/etc/permissions/com.verizon.services.xml \
     vendor/google/walleye/proprietary/etc/permissions/features-verizon.xml:system/etc/permissions/features-verizon.xml \
     vendor/google/walleye/proprietary/etc/permissions/obdm_permissions.xml:system/etc/permissions/obdm_permissions.xml \
+    vendor/google/walleye/proprietary/etc/permissions/com.android.omadm.service.xml:system/etc/permissions/com.android.omadm.service.xml \
+    vendor/google/walleye/proprietary/etc/permissions/privapp-permissions-walleye.xml:system/etc/permissions/privapp-permissions-walleye.xml \
+    vendor/google/walleye/proprietary/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml \
     vendor/google/walleye/proprietary/etc/permissions/privapp-permissions-wahoo.xml:system/etc/permissions/privapp-permissions-wahoo.xml \
     vendor/google/walleye/proprietary/etc/permissions/vzw_mvs_permissions.xml:system/etc/permissions/vzw_mvs_permissions.xml \
     vendor/google/walleye/proprietary/lib/com.qualcomm.qti.imsrtpservice@1.0.so:system/lib/com.qualcomm.qti.imsrtpservice@1.0.so \
@@ -54,36 +60,49 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
     vendor/google/walleye/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/google/walleye/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
-    vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so
+    vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/google/walleye/proprietary/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:system/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
 
 PRODUCT_PACKAGES += \
-    Tycho \
-    VZWAPNLib \
-    embms \
-    ims \
-    vzw_msdc_api \
-    CNEService \
+    AmbientSensePrebuilt \
     CarrierServices \
     CarrierSetup \
+    cneapiclient \
+    CNEService \
+    com.google.android.camera.experimental2017 \
+    com.quicinc.cne \
+    com.quicinc.cne.api-V1.0-java \
     ConnMO \
+    datastatusnotification \
     DCMO \
-    DMService \
     DiagMon \
+    DMService \
+    EaselServicePrebuilt \
+    embms \
+    embmslibrary \
     GCS \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentTGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
+    ims \
+    ModemService \
+    MyVerizonServices \
     OBDM_Permissions \
+    obdm_stub \
     OemDmTrigger \
+    qcrilhook \
+    qcrilmsgtunnel \
+    QtiTelephonyService \
+    rcsimssettings \
     SprintDM \
     SprintHM \
-    VzwOmaTrigger \
-    obdm_stub \
-    qcrilmsgtunnel \
+    SSRestartDetector \
+    TimeService \
+    Tycho \
+    VerizonAuthDialog \
     VerizonUnifiedSettings \
-    cneapiclient \
-    com.quicinc.cne.api-V1.0-java \
-    com.quicinc.cne \
-    embmslibrary \
-    rcsimssettings \
-    vendor.qti.qcril.am-V1.0-java
+    VZWAPNLib \
+    vzw_msdc_api \
+    VzwOmaTrigger \
+    wahoo_gfxdrv \
+    WfcActivation
