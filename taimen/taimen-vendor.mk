@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
     EaselServicePrebuilt \
     EuiccGoogle \
     VZWAPNLib \
-    datastatusnotification \
     embms \
     ims \
     CNEService \
@@ -105,6 +104,7 @@ PRODUCT_PACKAGES += \
     WfcActivation \
     MyVerizonServices \
     VerizonAuthDialog \
+    datastatusnotification \
     obdm_stub \
     qcrilmsgtunnel \
     VerizonUnifiedSettings \
