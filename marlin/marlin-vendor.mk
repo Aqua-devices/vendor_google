@@ -14,29 +14,42 @@
 
 # Prebuilt APKs
 PRODUCT_PACKAGES += \
-    arcore \
+    atfwd \
     CarrierServices \
+    CarrierSettings \
     CarrierSetup \
     CNEService \
+    colorservice \
     ConnMO \
+    datastatusnotification \
     DCMO \
     DiagMon \
     DMService \
-    GCS \
+    embms \
+    fastdormancy \
     HardwareInfo \
     HotwordEnrollmentOKGoogleWCD9335 \
     HotwordEnrollmentXGoogleWCD9335 \
     ims \
+    imssettings \
     MyVerizonServices \
     OBDM_Permissions \
     obdm_stub \
     OemDmTrigger \
+    QAS_DVC_MSP \
     qcrilmsgtunnel \
+    QtiTelephonyService \
+    radioconfig \
+    RCSBootstraputil \
+    SecureExtAuthService \
+    shutdownlistener \
     SprintDM \
     SprintHM \
     SSRestartDetector \
     TetheringEntitlement \
+    TimeService \
     Tycho \
+    vzw_msdc_api \
     VZWAPNLib \
     VzwOmaTrigger \
     WfcActivation
@@ -44,8 +57,12 @@ PRODUCT_PACKAGES += \
 # Prebuilt JARs
 PRODUCT_PACKAGES += \
     com.google.android.camera.experimental2016 \
+    embmslibrary \
     libhwinfo \
-    qcrilhook
+    qcrilhook \
+    QtiTelephonyServicelibrary \
+    qti-vzw-ims-internal \
+    rcsservice
 
 # Enforced modules from user configuration
 PRODUCT_PACKAGES += \
@@ -57,43 +74,42 @@ PRODUCT_PACKAGES += \
     virtual_touchpad
 
 PRODUCT_COPY_FILES += \
-    vendor/google/marlin/proprietary/bin/move_widevine_data.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/move_widevine_data.sh:google \
-    vendor/google/marlin/proprietary/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml:google \
-    vendor/google/marlin/proprietary/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml:google \
-    vendor/google/marlin/proprietary/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/VZW/VZW_profiles.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.android.vzwomatrigger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.vzwomatrigger.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.customermobile.preload.vzw.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.customermobile.preload.vzw.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.google.android.camera.experimental2016.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.camera.experimental2016.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.verizon.embms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.embms.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.verizon.llkagent.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.llkagent.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.verizon.provider.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.provider.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/com.verizon.services.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.services.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml:google \
-    vendor/google/marlin/proprietary/etc/permissions/privapp-permissions-marlin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-marlin.xml:google \
-    vendor/google/marlin/proprietary/etc/sysconfig/marlin_common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/marlin_common.xml:google \
-    vendor/google/marlin/proprietary/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml:google \
-    vendor/google/marlin/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml:google \
-    vendor/google/marlin/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/whitelist_com.android.omadm.service.xml:google \
-    vendor/google/marlin/proprietary/etc/textclassifier/actions_suggestions.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/actions_suggestions.universal.model:google \
-    vendor/google/marlin/proprietary/etc/textclassifier/lang_id.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/lang_id.model:google \
-    vendor/google/marlin/proprietary/etc/textclassifier/textclassifier.en.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.en.model:google \
-    vendor/google/marlin/proprietary/etc/textclassifier/textclassifier.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.universal.model:google \
-    vendor/google/marlin/proprietary/lib/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaptX_encoder.so:google \
-    vendor/google/marlin/proprietary/lib/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaptXHD_encoder.so:google \
-    vendor/google/marlin/proprietary/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvideocodec.so:google \
-    vendor/google/marlin/proprietary/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtextutils.so:google \
-    vendor/google/marlin/proprietary/lib/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvt.so:google \
-    vendor/google/marlin/proprietary/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtutils.so:google \
-    vendor/google/marlin/proprietary/lib/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/librcc.so:google \
-    vendor/google/marlin/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so:google \
-    vendor/google/marlin/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so:google \
-    vendor/google/marlin/proprietary/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvideocodec.so:google \
-    vendor/google/marlin/proprietary/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtextutils.so:google \
-    vendor/google/marlin/proprietary/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvt.so:google \
-    vendor/google/marlin/proprietary/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtutils.so:google \
-    vendor/google/marlin/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so:google \
-    vendor/google/marlin/proprietary/lib64/vendor.qti.atcmdfwd@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.atcmdfwd@1.0.so:google \
-    vendor/google/marlin/proprietary/lib64/vendor.qti.qcril.am@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.qcril.am@1.0.so:google
+    vendor/google/marlin/proprietary/bin/move_widevine_data.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/move_widevine_data.sh \
+    vendor/google/marlin/proprietary/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml \
+    vendor/google/marlin/proprietary/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml \
+    vendor/google/marlin/proprietary/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/VZW/VZW_profiles.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.android.vzwomatrigger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.vzwomatrigger.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.customermobile.preload.vzw.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.customermobile.preload.vzw.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.google.android.camera.experimental2016.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.camera.experimental2016.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.verizon.embms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.embms.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.verizon.llkagent.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.llkagent.xml \
+    vendor/google/marlin/proprietary/etc/permissions/com.verizon.services.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.services.xml \
+    vendor/google/marlin/proprietary/etc/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml \
+    vendor/google/marlin/proprietary/etc/permissions/privapp-permissions-marlin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-marlin.xml \
+    vendor/google/marlin/proprietary/etc/sysconfig/marlin_common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/marlin_common.xml \
+    vendor/google/marlin/proprietary/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml \
+    vendor/google/marlin/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+    vendor/google/marlin/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/whitelist_com.android.omadm.service.xml \
+    vendor/google/marlin/proprietary/etc/textclassifier/actions_suggestions.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/actions_suggestions.universal.model \
+    vendor/google/marlin/proprietary/etc/textclassifier/lang_id.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/lang_id.model \
+    vendor/google/marlin/proprietary/etc/textclassifier/textclassifier.en.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.en.model \
+    vendor/google/marlin/proprietary/etc/textclassifier/textclassifier.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.universal.model \
+    vendor/google/marlin/proprietary/lib/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaptX_encoder.so \
+    vendor/google/marlin/proprietary/lib/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaptXHD_encoder.so \
+    vendor/google/marlin/proprietary/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvideocodec.so \
+    vendor/google/marlin/proprietary/lib/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtextutils.so \
+    vendor/google/marlin/proprietary/lib/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvt.so \
+    vendor/google/marlin/proprietary/lib/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-imsvtutils.so \
+    vendor/google/marlin/proprietary/lib/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/librcc.so \
+    vendor/google/marlin/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so \
+    vendor/google/marlin/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so \
+    vendor/google/marlin/proprietary/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvideocodec.so \
+    vendor/google/marlin/proprietary/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtextutils.so \
+    vendor/google/marlin/proprietary/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvt.so \
+    vendor/google/marlin/proprietary/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-imsvtutils.so \
+    vendor/google/marlin/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so \
+    vendor/google/marlin/proprietary/lib64/vendor.qti.atcmdfwd@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.atcmdfwd@1.0.so \
+    vendor/google/marlin/proprietary/lib64/vendor.qti.qcril.am@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.qti.qcril.am@1.0.so
 
 PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/product/etc/CarrierSettings/airtel_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_in.pb \
@@ -165,19 +181,19 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/product/etc/permissions/com.android.sdm.plugins.diagmon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.diagmon.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/com.android.sdm.plugins.sprintdm.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.sprintdm.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.hardwareinfo.xml \
-    vendor/google/marlin/proprietary/product/etc/permissions/com.verizon.apn.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.apn.xml:google \
-    vendor/google/marlin/proprietary/product/etc/permissions/features-verizon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/features-verizon.xml:google \
-    vendor/google/marlin/proprietary/product/etc/permissions/obdm_permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/obdm_permissions.xml:google \
+    vendor/google/marlin/proprietary/product/etc/permissions/com.verizon.apn.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.verizon.apn.xml \
+    vendor/google/marlin/proprietary/product/etc/permissions/features-verizon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/features-verizon.xml \
+    vendor/google/marlin/proprietary/product/etc/permissions/obdm_permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/obdm_permissions.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/privapp-permissions-google-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-p.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/privapp-permissions-google-ps.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-ps.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \
-    vendor/google/marlin/proprietary/product/etc/permissions/vzw_mvs_permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vzw_mvs_permissions.xml:google \
-    vendor/google/marlin/proprietary/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml:google \
+    vendor/google/marlin/proprietary/product/etc/permissions/vzw_mvs_permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vzw_mvs_permissions.xml \
+    vendor/google/marlin/proprietary/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml \
     vendor/google/marlin/proprietary/product/etc/sysconfig/vzw_mvs_sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/vzw_mvs_sysconfig.xml \
     vendor/google/marlin/proprietary/product/etc/sysconfig/whitelist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/whitelist_com.android.omadm.service.xml \
-    vendor/google/marlin/proprietary/product/lib/libdmengine.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmengine.so:google \
-    vendor/google/marlin/proprietary/product/lib/libdmjavaplugin.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmjavaplugin.so:google \
+    vendor/google/marlin/proprietary/product/lib/libdmengine.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmengine.so \
+    vendor/google/marlin/proprietary/product/lib/libdmjavaplugin.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmjavaplugin.so \
     vendor/google/marlin/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
     vendor/google/marlin/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
-    vendor/google/marlin/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libakuaf.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libakuaf.so:google \
-    vendor/google/marlin/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:google
+    vendor/google/marlin/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libakuaf.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libakuaf.so \
+    vendor/google/marlin/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
