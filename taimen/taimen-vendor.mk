@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     OBDM_Permissions \
     obdm_stub \
     QAS_DVC_MSP_VZW \
+    QtiTelephonyService \
     qcrilmsgtunnel \
     SprintDM \
     SprintHM \
