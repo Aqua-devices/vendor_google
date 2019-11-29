@@ -823,17 +823,17 @@ LOCAL_PRODUCT_MODULE := true
 LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := qti-telephony-hidl-wrapper
-LOCAL_MODULE_OWNER := google
-LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_PRODUCT)/framework
-LOCAL_SRC_FILES := proprietary/product/framework/qti-telephony-hidl-wrapper.jar
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_PRODUCT_MODULE := true
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := qti-telephony-hidl-wrapper
+#LOCAL_MODULE_OWNER := google
+#LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_PRODUCT)/framework
+#LOCAL_SRC_FILES := proprietary/product/framework/qti-telephony-hidl-wrapper.jar
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+#LOCAL_PRODUCT_MODULE := true
+#LOCAL_MODULE_SUFFIX := .jar
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := QtiTelephonyServicelibrary
@@ -847,17 +847,17 @@ LOCAL_PRODUCT_MODULE := true
 LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := qti-telephony-utils
-LOCAL_MODULE_OWNER := google
-LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_PRODUCT)/framework
-LOCAL_SRC_FILES := proprietary/product/framework/qti-telephony-utils.jar
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_PRODUCT_MODULE := true
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := qti-telephony-utils
+#LOCAL_MODULE_OWNER := google
+#LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_PRODUCT)/framework
+#LOCAL_SRC_FILES := proprietary/product/framework/qti-telephony-utils.jar
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+#LOCAL_PRODUCT_MODULE := true
+#LOCAL_MODULE_SUFFIX := .jar
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := uimremoteclientlibrary
