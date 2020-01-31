@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),coral flame)
+ifeq ($(TARGET_DEVICE),flame)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := CACertService
