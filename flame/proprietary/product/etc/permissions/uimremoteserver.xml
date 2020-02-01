@@ -8,5 +8,5 @@
 
 <permissions>
  <library name="com.qualcomm.uimremoteserverlibrary"
-          file="/product/framework/uimremoteserverlibrary.jar"/>
+          file="/system/product/framework/uimremoteserverlibrary.jar"/>
 </permissions>
